@@ -1,0 +1,1 @@
+Backend service for Realtime chat service. Allow connecting to specific rooms and translation of app
