@@ -82,7 +82,6 @@ router.post("/:id/join", async function (req, res, next) {
         });
 
         if (room) {
-            console.log("Adding this nigga again");
             room.members.push({ user_id: user._id, active: true });
             await room.save();
         }
