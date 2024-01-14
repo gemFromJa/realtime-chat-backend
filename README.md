@@ -1,11 +1,14 @@
 Backend for a Realtime chat service. Allow connecting to specific rooms and translation of app.
 
-### Technologies
+##### Technologies
+
 -Websockets
+
 -ExpressJs
+
 -Mongodb
 
-### TODO:
+##### Todo:
 - caching
 - cleanup structure
 - remove magic numbers
@@ -27,8 +30,48 @@ Backend for a Realtime chat service. Allow connecting to specific rooms and tran
    replace [translation key] with API key from rapidapi
    
 3. Run file
+   
    to run the project, from the terminal type
-   ```npm start```
+   
+   ```
+   npm start
+   ```
 
-### API Overview
+### Rest API Overview
+
+1. ```/user/``` -- get the user info
+   
+   Type: ```GET```
+
+   Params: username
+   
+2. ```/user/``` -- create new username to join room
+
+   Type: ```POST```
+
+   Body: name, username
+
+3. ```/room/``` -- get existing rooms
+
+   Type: ```GET```
+   
+4. ```/room/mine/:id``` -- get the chatrooms user(:id) is apart of
+   
+   Type: ```GET```
+   
+5. ```/room/:id``` -- get room data ( messages etc)
+   
+   Type: ```GET```
+   
+6. ```/room/``` -- create new room
+   
+   Type: ```POST```
+   
+7. ```/room/:id/join``` -- join a room
+   
+   Type: ```POST```
+   
+8. ```/room/:id/message``` -- send a message
+   
+   Type: ```POST```
 
